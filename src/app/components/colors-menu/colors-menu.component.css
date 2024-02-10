@@ -1,3 +1,20 @@
 .colors-menu {
-  @apply p-5 shadow rounded bg-white;
+  @apply p-5 shadow rounded bg-white flex flex-col gap-6;
+}
+
+.colors-wrapper {
+  @apply flex justify-between;
+}
+
+.color-icon {
+  @apply w-10 h-10 text-2xl cursor-pointer flex justify-center items-center;
+}
+
+.active {
+  @apply border-black border shadow rounded;
+}
+
+.input {
+  @apply w-full;
+  accent-color: theme("colors.emerald");
 }

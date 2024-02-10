@@ -1,11 +1,29 @@
 <div class="colors-menu">
   <div>
     <h4>Cor</h4>
+    <div class="colors-wrapper">
+      @for (color of colors; track $index) {
+      <fa-icon
+        class="color-icon"
+        [icon]="faSquare"
+        [ngStyle]="{ color }"
+        [ngClass]="{ active: color === selectedColor }"
+        (click)="selectedColor = color"
+      ></fa-icon>
+      }
+    </div>
   </div>
   <div>
     <h4>Tamanho</h4>
     <div>
-      <input type="range" min="1" max="10" />
+      <input
+        type="range"
+        min="1"
+        max="10"
+        [(ngModel)]="range"
+        class="input"
+        (ngModelChange)="handleInputChange()"
+      />
     </div>
   </div>
 </div>
