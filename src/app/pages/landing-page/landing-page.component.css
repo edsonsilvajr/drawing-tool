@@ -1,0 +1,11 @@
+.landing-page {
+  @apply relative h-screen;
+}
+
+.options-menu {
+  @apply absolute w-1/4 right-1/2 translate-x-1/2 top-5;
+}
+
+.colors-menu {
+  @apply absolute left-10 bottom-1/2 translate-y-1/2;
+}
