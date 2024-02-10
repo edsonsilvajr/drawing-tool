@@ -33,6 +33,17 @@ export class LandingPageComponent implements AfterViewInit {
     this.canvasRef.nativeElement.width = innerWidth;
     this.canvasRef.nativeElement.height = innerHeight;
     this.context = this.canvasRef.nativeElement.getContext('2d')!;
+
+    this.canvasRef.nativeElement.addEventListener(
+      'touchstart',
+      this.onMouseDown
+    );
+    this.canvasRef.nativeElement.addEventListener(
+      'touchmove',
+      this.onMouseMove
+    );
+    this.canvasRef.nativeElement.addEventListener('touchend', this.onMouseUp);
+
     this.context.fillStyle = 'white';
     this.context.fillRect(
       0,
@@ -90,17 +101,23 @@ export class LandingPageComponent implements AfterViewInit {
     this.context.stroke();
   }
 
-  onMouseDown(event: MouseEvent) {
+  onMouseDown(event: any) {
     this.isDrawing = true;
-    this.beginPath(event.clientX, event.clientY);
+    this.beginPath(
+      event.clientX || event.touches[0].clientX,
+      event.clientY || event.touches[0].clientY
+    );
   }
 
-  onMouseUp(event: MouseEvent) {
+  onMouseUp(event: any) {
     this.isDrawing = false;
   }
 
-  onMouseMove(event: MouseEvent) {
+  onMouseMove(event: any) {
     if (!this.isDrawing) return;
-    this.drawLine(event.clientX, event.clientY);
+    this.drawLine(
+      event.clientX || event.touches[0].clientX,
+      event.clientY || event.touches[0].clientY
+    );
   }
 }
