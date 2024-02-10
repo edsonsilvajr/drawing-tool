@@ -36,13 +36,16 @@ export class LandingPageComponent implements AfterViewInit {
 
     this.canvasRef.nativeElement.addEventListener(
       'touchstart',
-      this.onMouseDown
+      this.onMouseDown.bind(this)
     );
     this.canvasRef.nativeElement.addEventListener(
       'touchmove',
-      this.onMouseMove
+      this.onMouseMove.bind(this)
     );
-    this.canvasRef.nativeElement.addEventListener('touchend', this.onMouseUp);
+    this.canvasRef.nativeElement.addEventListener(
+      'touchend',
+      this.onMouseUp.bind(this)
+    );
 
     this.context.fillStyle = 'white';
     this.context.fillRect(
