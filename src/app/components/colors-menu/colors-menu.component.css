@@ -1,0 +1,3 @@
+.colors-menu {
+  @apply p-5 shadow rounded;
+}

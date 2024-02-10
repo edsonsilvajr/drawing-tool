@@ -1,0 +1,12 @@
+.menu-wrapper {
+  @apply flex justify-between px-5 py-1 shadow rounded;
+}
+
+.icon-wrapper {
+  @apply h-10 w-10 cursor-pointer flex justify-center items-center rounded-md;
+
+  &:hover,
+  &.active {
+    background-color: theme("colors.emerald");
+  }
+}

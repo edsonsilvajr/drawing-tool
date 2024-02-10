@@ -1,0 +1,29 @@
+<div class="menu-wrapper">
+  <fa-icon
+    [icon]="faPen"
+    class="icon-wrapper"
+    [ngClass]="{ active: optionSelected[0] }"
+    (click)="atualizarArrayOptions(0)"
+  ></fa-icon>
+  <fa-icon
+    [icon]="faEraser"
+    class="icon-wrapper"
+    [ngClass]="{ active: optionSelected[1] }"
+    (click)="atualizarArrayOptions(1)"
+  ></fa-icon>
+  <fa-icon
+    [icon]="faUndo"
+    class="icon-wrapper"
+    (click)="atualizarArrayOptions(2)"
+  ></fa-icon>
+  <fa-icon
+    [icon]="faRedo"
+    class="icon-wrapper"
+    (click)="atualizarArrayOptions(3)"
+  ></fa-icon>
+  <fa-icon
+    [icon]="faDownload"
+    class="icon-wrapper"
+    (click)="atualizarArrayOptions(4)"
+  ></fa-icon>
+</div>
