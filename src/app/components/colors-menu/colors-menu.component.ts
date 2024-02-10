@@ -24,4 +24,12 @@ export class ColorsMenuComponent {
       size: this.range,
     });
   }
+
+  mudarCor(cor: string) {
+    this.selectedColor = cor;
+    this.evento.emit({
+      color: this.selectedColor,
+      size: this.range,
+    });
+  }
 }

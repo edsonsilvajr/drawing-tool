@@ -1,6 +1,12 @@
 <section class="landing-page">
-  <app-options-menu class="options-menu"></app-options-menu>
-  <app-colors-menu class="colors-menu"></app-colors-menu>
+  <app-options-menu
+    class="options-menu"
+    (evento)="handleOption($event)"
+  ></app-options-menu>
+  <app-colors-menu
+    class="colors-menu"
+    (evento)="handleConfig($event)"
+  ></app-colors-menu>
   <canvas
     #canvas
     (mousedown)="onMouseDown($event)"
