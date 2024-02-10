@@ -1,5 +1,5 @@
 .menu-wrapper {
-  @apply flex justify-between px-5 py-1 shadow rounded;
+  @apply flex justify-between px-5 py-1 shadow rounded bg-white;
 }
 
 .icon-wrapper {

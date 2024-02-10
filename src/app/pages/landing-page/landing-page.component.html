@@ -1,4 +1,11 @@
 <section class="landing-page">
   <app-options-menu class="options-menu"></app-options-menu>
   <app-colors-menu class="colors-menu"></app-colors-menu>
+  <canvas
+    #canvas
+    (mousedown)="onMouseDown($event)"
+    (mouseup)="onMouseUp($event)"
+    (mousemove)="onMouseMove($event)"
+    class="canvas"
+  ></canvas>
 </section>
