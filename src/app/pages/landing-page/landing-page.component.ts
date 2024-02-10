@@ -28,6 +28,7 @@ export class LandingPageComponent implements AfterViewInit {
     this.canvasRef.nativeElement.width = innerWidth;
     this.canvasRef.nativeElement.height = innerHeight;
     this.context = this.canvasRef.nativeElement.getContext('2d')!;
+    //
   }
 
   beginPath(x: number, y: number) {
